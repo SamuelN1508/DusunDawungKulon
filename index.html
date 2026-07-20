@@ -66,19 +66,29 @@
 </svg>
 
 <!-- ===================== NAV DESKTOP ===================== -->
-<header class="hidden md:block sticky top-0 z-40 bg-cream/95 backdrop-blur border-b border-[#E7DEC9]">
+<header class="hidden md:block sticky top-0 z-40 bg-ink/95 backdrop-blur border-b border-ink shadow-sm">
   <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-    <a href="#page-home" class="flex items-center gap-3">
-      <span class="w-10 h-10 rounded-full bg-hijau text-cream flex items-center justify-center font-display text-lg">DK</span>
-      <span class="font-display text-xl text-ink">Dusun Dawung Kulon</span>
+    <a href="#page-home" class="flex items-center gap-3 group">
+      <span class="w-10 h-10 rounded-full bg-hijau text-cream flex items-center justify-center font-display text-lg group-hover:scale-105 transition">DK</span>
+      <span class="font-display text-xl text-cream">Dusun Dawung Kulon</span>
     </a>
-    <nav class="flex items-center gap-7 text-sm font-semibold text-coklat">
+    <nav class="flex items-center gap-7 text-sm font-semibold text-cream/80">
       <a href="#page-home" class="hover:text-terakota transition">Home</a>
       <a href="#page-acara" class="hover:text-terakota transition">Acara</a>
       <a href="#page-hasilbumi" class="hover:text-terakota transition">Hasil Bumi</a>
       <a href="#page-tentang" class="hover:text-terakota transition">Tentang Dusun</a>
       <a href="#page-kontak" class="hover:text-terakota transition">Kontak</a>
     </nav>
+  </div>
+</header>
+
+<!-- ===================== NAV MOBILE ===================== -->
+<header class="md:hidden sticky top-0 z-40 bg-ink/95 backdrop-blur border-b border-ink shadow-sm">
+  <div class="px-4 py-3 flex items-center justify-between">
+    <a href="#page-home" class="flex items-center gap-2">
+      <span class="w-9 h-9 rounded-full bg-hijau text-cream flex items-center justify-center font-display">DK</span>
+      <span class="font-display text-lg text-cream">Dawung Kulon</span>
+    </a>
   </div>
 </header>
 
@@ -333,21 +343,20 @@
 </main>
 
   <!-- ===================== 6. FOOTER ===================== -->
-  <footer class="bg-ink text-cream/80 py-8 md:py-12 mt-10 md:mt-16 rounded-t-3xl md:rounded-t-[3rem] border-t-[6px] border-terakota">
-    <div class="max-w-6xl mx-auto px-6 md:px-10 flex flex-col md:flex-row justify-between items-center gap-6">
+  <footer class="mt-10 md:mt-16 border-t border-[#E7DEC9] py-8">
+    <div class="max-w-6xl mx-auto px-5 md:px-10">
       
-      <div class="text-center md:text-left">
-        <div class="flex items-center justify-center md:justify-start gap-3 mb-3">
-          <span class="w-8 h-8 rounded-full bg-hijau text-cream flex items-center justify-center font-display text-sm">DK</span>
-          <span class="font-display text-2xl text-cream">Dusun Dawung Kulon</span>
-        </div>
-        <p class="text-sm opacity-80">Desa Candi, Kec. Pringkuku, Kabupaten Pacitan, Jawa Timur</p>
-      </div>
-
-      <div class="flex flex-col items-center md:items-end gap-3 text-sm">
-        <p>© 2026 Karang Taruna Dawung Kulon.</p>
-        <p class="text-xs text-cream/40">Dikelola secara independen oleh warga.</p>
-      </div>
+      <!-- Tombol rahasia admin disembunyikan dalam bentuk teks biasa -->
+      <!-- Pastikan kode modal-login ada di dalam file HTML Anda agar ini berfungsi -->
+      <button onclick="document.getElementById('modal-login').classList.remove('hidden'); document.getElementById('modal-login').classList.add('flex');" 
+              class="flex items-center gap-2 text-sm text-coklat/70">
+        
+        <!-- Ikon kecil menyerupai daun singkong (khas dusun Anda) -->
+        <svg viewBox="0 0 100 100" class="w-4 h-4 text-hijau/70 shrink-0"><use href="#ikon-daun-singkong"></use></svg>
+        
+        <span>Dusun Dawung Kulon: Tenang, Hijau, Asri dan Bersatu</span>
+        
+      </button>
 
     </div>
   </footer>
