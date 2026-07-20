@@ -732,9 +732,11 @@ document.addEventListener('DOMContentLoaded', function() {
       // Mengambil data dari form
       const formData = new FormData(formKontak);
 
-      // MENGIRIM KE FORMSPREE
-      // Ganti KODE_UNIK_ANDA dengan kode milik Anda
-      fetch('https://formspree.io/f/05903cf5-865f-44f1-9b93-98a8e0d8b560', {
+      // MENGIRIM KE WEB3FORMS
+      // access_key ini yang menentukan pesan masuk ke akun Web3Forms mana
+      formData.append('access_key', '05903cf5-865f-44f1-9b93-98a8e0d8b560');
+
+      fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         body: formData,
         headers: {
